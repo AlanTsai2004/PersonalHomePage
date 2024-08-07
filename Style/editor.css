@@ -1,0 +1,211 @@
+#table-insert-dialog {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border: 1px solid black;
+    padding: 10px;
+    z-index: 1000;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse; 
+    table-layout: fixed;
+
+}
+
+td {
+    border: 1px solid black;
+    padding: 5px;
+    position: relative;
+    resize: both;
+    overflow: auto;
+    min-width: 50px;
+    min-height: 50px;
+    max-width: 200px;
+    max-height: 200px;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    font-size: 20px;
+    font-family: '新細明體', 'Arial', sans-serif;
+    background-color: #f8f8f8;
+    color: #333;
+    text-align: center;
+    cursor: pointer;
+    user-select: none;
+}
+
+td:after {
+    content: '';
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 10px;
+    height: 10px;
+    background: transparent;
+    cursor: nwse-resize;
+}
+
+
+
+
+#editorcontainer {
+    position: relative;
+    top: 10%;
+    width: 90%;
+    height: 95%;
+    overflow: hidden;
+    background-color: #f8f8f8;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+#edittools {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background-color: #f8f8f8;
+    border-bottom: 1px solid #e0e0e0;
+    border-radius: 5px 5px 0 0;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.edittool {
+    --size: 55px;
+    width: var(--size);
+    height: fit-content;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+    transition: all 0.3 ease-in-out;
+}
+
+.edittool:hover {
+    filter: brightness(0.8);
+    background-color: #f0f0f0;
+    border-radius: 5px;
+}
+
+.edittool img {
+    width: calc(var(--size) * 0.75);
+}
+
+#deletetextbtn {
+    font-size: 40px;
+    line-height: 40px;
+    color: rgb(43, 155, 234);
+    font-weight: 600;
+    text-decoration: line-through;
+}
+
+#fontsizeselect {
+    width: 50px;
+    height: 40px;
+    font-size: 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    text-align: center;
+    padding: 5px;
+    background-color: #f8f8f8;
+    color: #333;
+    outline: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+
+#fontsizearea {
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#fontsizearea:hover {
+    filter: brightness(1);
+    background: none;
+}
+
+
+#fontcolorarea {
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#fontcolorarea:hover {
+    filter: brightness(1);
+    background: none;
+}
+
+#fontcolorinput {
+    width: 50px;
+    height: 40px;
+    font-size: 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: #f8f8f8;
+    color: #333;
+    outline: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+#fontselect {
+    width: 120px;
+    height: 40px;
+    font-size: 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: #f8f8f8;
+    color: #333;
+    outline: none;
+    cursor: pointer;
+    text-align: center;
+    margin-right: 5px;
+}
+
+#fontselectarea {
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#fontselectarea:hover {
+    filter: brightness(1);
+    background: none;
+}
+
+#editorareacontext {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    height: calc(100% - 70px);
+    overflow: auto;
+    padding: 10px;
+    color: #000;
+    font-family: '新細明體', 'Arial', sans-serif;
+    outline: none;
+    border: none;
+    background-color: none;
+    border-radius: 0 0 5px 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    resize: none;
+    scrollbar-width: thin;
+}

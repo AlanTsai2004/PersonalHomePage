@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Style/property.css">
+    <link rel="stylesheet" href="./Style/animation.css">
+    <link rel="stylesheet" href="./Style/documentedit.css">
+    <link rel="stylesheet" href="./Style/editor.css">
+    <link rel="stylesheet" href="./Style/musicplayer.css">
+    <link rel="stylesheet" href="./Style/style.css">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.12/cropper.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.12/cropper.min.js"></script>
+    <title>Alan的主頁</title>
+</head>
+
+<body>
+    <div id="mytool">
+        <div id="dialogshow"></div>
+        <div id="toolcontainer"></div>
+        <div id="sidebartool">
+            <div class="sidetool" onclick="location.href='https://mail.google.com'">
+                <img src="./Public/sidesicon/gmail.png" width="40px">
+                Gmail
+            </div>
+            <div class="sidetool" onclick="location.href='https://www.youtube.com/'">
+                <img src="./Public/sidesicon/youtube.png" width="40px">
+                Youtube
+            </div>
+            <div class="sidetool" onclick="location.href='https://drive.google.com/'">
+                <img src="./Public/sidesicon/google-drive.png" width="40px">
+                雲端硬碟
+            </div>
+            <div class="sidetool" onclick="location.href='https://meet.google.com/'">
+                <img src="./Public/sidesicon/meet.png" width="40px">
+                Meet
+            </div>
+            <div class="sidetool" onclick="location.href='https://translate.google.com/'">
+                <img src="./Public/sidesicon/google.png" width="40px">
+                翻譯
+            </div>
+            <div class="sidetool" onclick="location.href='https://chatgpt.com/'">
+                <img src="./Public/sidesicon/ChatGPT.ico" width="40px">
+                ChatGPT
+            </div>
+            <div class="sidetool" onclick="showmusicplayer()">
+                <img src="./Public/musicplayer/music.png" width="40px">
+                音樂
+            </div>
+        </div>
+    </div>
+</body>
+<script src="./App/Data.js"></script>
+<script src="./App/Main.js"></script>
+<script src="./App/Mine.js"></script>
+<script src="./App/DocumentEditor.js"></script>
+<script src="./App/Editor.js"></script>
+<script src="./App/Musicplayer.js"></script>
+
+</html>
